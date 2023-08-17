@@ -3,8 +3,8 @@ const ejs=require('ejs')
 const  expresslayout=require('express-ejs-layouts')
 
 const path=require('path')
-
 const app= express();
+app.use(express.static('public'));//to run realtime on website
 
 const PORT= process.env.PORT|| 4000
 
