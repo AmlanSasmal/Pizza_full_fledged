@@ -1,8 +1,73 @@
-body{
-    background-color: aquamarine;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body{
+    height: 4000px;
+} */
+
+nav li #last{
+    background-color: orange;
 }
-.c1{
-    height: 2cm;
-    width: 4cm;
-    background-color: azure;
+
+nav li a:hover{
+    color: orange;
+}
+
+nav li #last:hover{
+    background-color: rgb(203, 92, 52);
+
+}
+nav li #last1:hover{
+    background-color: rgb(203, 92, 52);
+
+
+}
+
+nav li .ml-6{
+    transition: 0.2s ease-in-out;
+}
+
+section.hero{
+    background: whitesmoke;
+}
+
+.img1{
+    mix-blend-mode: multiply;
+}
+
+.size{
+    background-color: whitesmoke;
+}
+
+.add-to-cart{
+    border: 2px solid orange;
+    color: orange;
+    transition: 0.2s ease-in-out;
+
+}
+
+.add-to-cart:hover{
+    background:orange;
+    border-color: white;
+    color: white;
+}
+
+.btn-primary{
+    background: orange;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover{
+    background-color: rgb(137, 103, 39);
+}
+
+
+.cart{
+    background-color: whitesmoke;
+}
+
+.width{
+    width: 18%;
 }
