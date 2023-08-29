@@ -5,10 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pizza App</title>
-    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+<link href=
+"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+          rel="stylesheet">
 <link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=Rf6gvkh2qqeO&format=png" type="image/x-icon">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/views/style.css">
 <style>
@@ -44,8 +47,11 @@
   <a href="/">Home</a>
   <a href="#menu">Menu</a>
   <a href="#about">About Us</a>
+  <a href="http://localhost:4000/login">Login</a>
   <a href="#contact">Contact</a>
-  <a  id="last" class="px-4 py-2 ml-6 rounded-full"  href="/cart"><img id="last1" src="/img/cart.png" alt="cart invalid"></a>
+  <a  id="last" class="inline-block px-4 py-2 ml-6 rounded-full flex items-center"  href="/cart">
+    <span id="cartCounter" class="text-white font-bold">3</span>
+    <img id="last1" src="/img/cart.png" alt="cart invalid"></a>
 </div>
 </nav>
 <!-- Rest of your website content here -->
