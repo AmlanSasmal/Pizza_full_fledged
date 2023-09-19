@@ -4,14 +4,10 @@ const ejs = require('ejs')
 const expresslayout = require('express-ejs-layouts')
 const mongoose = require('mongoose');
 
-
-
+const flash = require('express-flash');
 
 const session = require('express-session');
-
-const flash = require('express-flash')
-
-const MongoStore = require('connect-mongo')
+const MongoStore = require('connect-mongo');
 
 const passport=require('passport');
 
@@ -31,16 +27,6 @@ const mongoClientPromise = new Promise((resolve) => {
         resolve(client);
     });
 });
-//passport config
-app.use(require('express-session')({ 
-    secret: 'Enter your secret key',
-    resave: true,
-    saveUninitialized: true
-  }));
-const passportInit=require('./app/config/passport');
-passportInit(passport);
-app.use(passport.initialize())
-app.use(passport.session())
 
 //session config
 MONGO_URI='mongodb://127.0.0.1:27017/pizza'
@@ -56,6 +42,18 @@ app.use(session({
 
 }))
 
+//passport config
+app.use(require('express-session')({ 
+    secret: 'Enter your secret key',
+    resave: true,
+    saveUninitialized: true
+  }));
+const passportInit=require('./app/config/passport');
+passportInit(passport);
+app.use(passport.initialize())
+app.use(passport.session())
+
+
 app.use(flash()); 
  app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -68,6 +66,7 @@ app.use(express.static('public'))
 //global middleware
 app.use((req,res,next)=>{
     res.locals.session=req.session;
+    res.locals.user=req.user;
     next()
 })
 

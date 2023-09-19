@@ -59,11 +59,15 @@ user.save().then((user) => {
    // Login
    return res.redirect('/')
 }).catch(err => {
-   req.flash('error', 'Something went wrong')
+   req.flash('error', 'This email address has already taken! ')
        return res.redirect('/register')
 })
 
 
+    },
+    logout(req,res){
+req.logout()
+return res.redirect('/login');
     }
 
   }
