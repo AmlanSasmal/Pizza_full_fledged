@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza App</title>
+<link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=Rf6gvkh2qqeO&format=png" type="image/x-icon">
+<link href=
+"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+          rel="stylesheet">
+<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/views/style.css">
+</head>
+<body>
+    <section class="orders light-section">
+        <div class="container mx-auto pt-12">
+            <h1 class="font-bold text-lg mb-4">All orders</h1>
+            <table class="w-full table-auto bg-white">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Orders</th>
+                        <th class="px-4 py-2 text-left">Customer</th>
+                        <th class="px-4 py-2 text-left">Address</th>
+                        <th class="px-4 py-2 text-left">status</th>
+                        <th class="px-4 py-2 text-left">Placed at</th>
+                        <th class="px-4 py-2 text-left">Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

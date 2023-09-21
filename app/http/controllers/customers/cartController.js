@@ -25,9 +25,7 @@ function cartController() {
 
                  cart.totalQty=cart.totalQty+1
                  cart.totalprice=cart.totalprice+req.body.price
-            }
-
-            else{
+            }else{
                 cart.items[req.body._id].qty=cart.items[req.body._id].qty+1
                 cart.totalQty=cart.totalQty+1
                 cart.totalprice=cart.totalprice+req.body.price
