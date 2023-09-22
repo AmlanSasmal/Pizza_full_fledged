@@ -89,16 +89,14 @@ const { log } = require('console');
 
 
 // connect to database 
-
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/pizza').then(() => console.log("connected")).catch((err) => {
+    await mongoose.connect('mongodb://127.0.0.1:27017/pizza').then(
+        () => console.log("connected")).catch((err) => {
         console.log(`unable to connect with the server ${err}`);
     })
 }
-
-
 
 app.listen(PORT, () => {
     console.log(`listening on port  ${PORT} `);
