@@ -13,11 +13,13 @@ function orderController() {
                     if (req.xhr) {
                         return res.json(orders);
                     }
-                    return res.render('admin/orders', { orders });
-                }).catch((err) => {
+                    return res.render('admin/orders', {orders});
+                })
+                .catch((err) => {
                     console.error(err);
                     return res.status(500).json({ error: 'Internal server error' });
-                });
+                });
+
 
         }
     }
