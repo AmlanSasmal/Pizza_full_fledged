@@ -1,3 +1,5 @@
+
+
 // const order = require('../../../models/order')
 const Order = require('../../../models/order')
 
@@ -13,7 +15,7 @@ function orderController() {
                     if (req.xhr) {
                         return res.json(orders);
                     }
-                    return res.render('admin/orders', {orders});
+                    return res.render('admin/orders', { orders });
                 })
                 .catch((err) => {
                     console.error(err);
